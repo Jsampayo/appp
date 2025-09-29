@@ -28,7 +28,7 @@ public class Appp {
             switch (opcionMenuPrincpial) {
 
                 case 1 -> {
-                    System.out.println("----------------------------------------\nMenu cliente\n----------------------------------------\n1. Ver reservas activas\n2. Reservar una cancha\n3. volver");
+                    System.out.println("----------------------------------------\nMenu cliente\n----------------------------------------\n1. Ver reservas activas\n2. Reservar una cancha\n3. volver");                                 
                     
                     System.out.print("\nSelecciona la opcion de tu preferencia: ");
                     byte opcionMenuCliente = teclado.nextByte();
