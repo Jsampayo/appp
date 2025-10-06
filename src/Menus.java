@@ -18,7 +18,11 @@ public class Menus {
         int user = scanner.nextInt();
 
         System.out.print("Ingrese su contraseña: ");
+        String password = scanner.nextLine();
         
+        
+        scanner.close();
+
 
     }
     
