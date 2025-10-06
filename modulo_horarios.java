@@ -31,16 +31,18 @@ public class modulo_horarios {
         
             System.out.printf("%-30s %-20s %-20s\n", "HORA DISPONIBLE","DIA","CAPACIDAD\n");
 
-            for (int j = 0; j < horarioCancha.length; j++) {
+            for (int j=0; j<horarioCancha.length; j++) {
                  for (int k = 0; k < canchas.length; k++) {
                      System.out.printf("%-30s %-20s  %-20s\n", horarioCancha[j], diaReserva, canchas[k]);
             
             }System.out.println("\n");
                 }
+        }
 
-        
 
-        }System.out.println("fecha incorrecta");
+
+
+        System.out.println("fecha incorrecta");
         System.out.println("hola, esto es una prueba");
 
 
