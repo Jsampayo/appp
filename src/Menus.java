@@ -25,7 +25,6 @@ public class Menus {
     }
     
 
-
     // Menus de usuario
     public static String Inicio_de_sesion_User(Scanner input){
         System.out.println("Ingrese su nombre de usuario:");
