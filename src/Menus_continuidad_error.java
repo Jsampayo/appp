@@ -1,6 +1,6 @@
 package src;
 
-public class Sesiones_de_inicio {
+public class Menus_continuidad_error {
     
     
     //menus para colocar a la hora de que la sesion o de un error o sea correcta para continuar
@@ -8,14 +8,14 @@ public class Sesiones_de_inicio {
         
         System.out.print("╔═════════════════════════════════╗");
         System.out.print("║                                 ║");
-        System.out.print("║      Bienvenido cliente         ║");
+        System.out.print("║      Bienvenido cliente.        ║");
         System.out.print("║                                 ║");
         System.out.print("╚═════════════════════════════════╝"); 
     }
    public void Sesion_admin() {
         System.out.print("╔═════════════════════════════════╗");
         System.out.print("║                                 ║");
-        System.out.print("║    Bienvenido Administrador     ║");
+        System.out.print("║    Bienvenido Administrador.    ║");
         System.out.print("║                                 ║");
         System.out.print("╚═════════════════════════════════╝");
     }
@@ -36,5 +36,6 @@ public class Sesiones_de_inicio {
         System.out.print("║                                 ║");
         System.out.print("╚═════════════════════════════════╝");
     }
+
 
 }
