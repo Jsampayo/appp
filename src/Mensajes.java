@@ -25,10 +25,17 @@ public void Sesion_error() {
         System.out.print("║      su usario o contraseña     ║");
         System.out.print("║         son incorrectos         ║");
         System.out.print("║                                 ║");
-        System.out.print("╠═════════════════════════════════╣");
+        System.out.print("╚═════════════════════════════════╝");
 
     }
-
+public void Sesion_en_uso() {
+        System.out.print("╔═════════════════════════════════╗");
+        System.out.print("║                                 ║");
+        System.out.print("║       Este usuario ya esta      ║");
+        System.out.print("║             registrado          ║");
+        System.out.print("║                                 ║");
+        System.out.print("╚═════════════════════════════════╝");
+    }
         //Crear Menu opcion no Valida
         //Conectar Metodos inicio de sesion User en base al diagrama de flujo utilizando If y imprimiendo lo ingresado por teclado 
         

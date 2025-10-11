@@ -13,9 +13,34 @@ public class Main {
         
 
         if (opcion == 1){
-            Menus.Acceder_Usuario(input);
-        }   else {System.out.println("nada");
-            }
+           byte inicio = Menus.Menu_cliente(input);
+           if (inicio == 1){
+            String Username = Menus.Inicio_de_sesion_User(input);
+            String UserPassword = Menus.Inicio_de_sesion_UserPassword(input);
+            //validar que estas credenciales sean correctas, si no son correctar repetir el proceso
+            //if (    )
+            //else {
+            // Menus_continuidad_error.Sesion_error();}
+           }else if (inicio == 2){
+                String RegistroUser = Menus.Registrar_Username(input);
+                String RegistroPassword = Menus.Registro_Password(input);
+                
+                
+                // else{
+                //  Menus_continuidad_error.Sesion_en_uso();}
+           }
+
+
+           else {System.out.println("dijite una opcion valida");
+
+           }
+        }   
+        else if (opcion == 2){ 
+
+        }
+
+        
+            
         
         
 
