@@ -12,30 +12,27 @@ public class Menus_continuidad_error {
         System.out.print("║                                 ║");
         System.out.print("╚═════════════════════════════════╝"); 
     }
-   public void Sesion_admin() {
+public void Sesion_admin() {
         System.out.print("╔═════════════════════════════════╗");
         System.out.print("║                                 ║");
         System.out.print("║    Bienvenido Administrador.    ║");
         System.out.print("║                                 ║");
         System.out.print("╚═════════════════════════════════╝");
     }
-   public void Sesion_error() {
+public void Sesion_error() {
         System.out.print("╔═════════════════════════════════╗");
         System.out.print("║                                 ║");
         System.out.print("║      su usario o contraseña     ║");
         System.out.print("║         son incorrectos         ║");
         System.out.print("║                                 ║");
         System.out.print("╠═════════════════════════════════╣");
-        System.out.print("║                                 ║");
-        System.out.print("║                                 ║");
-        System.out.print("║                                 ║");
-        System.out.print("║ porfavor dijiste nuevamente su  ║");
-        System.out.print("║       usario y contraseña       ║");
-        System.out.print("║                                 ║");
-        System.out.print("║                                 ║");
-        System.out.print("║                                 ║");
-        System.out.print("╚═════════════════════════════════╝");
+
     }
+
+        //Crear Menu opcion no Valida
+        //Conectar Metodos inicio de sesion User en base al diagrama de flujo utilizando If y imprimiendo lo ingresado por teclado 
+        
+        
 
 
 }
