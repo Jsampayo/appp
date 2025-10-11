@@ -1,17 +1,36 @@
 package src;
-
 import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
-        String idAdmin = "1043634434";
-        String passwordAdmin = "hola";
+        String IdAdmin = "1043634434";
+        String PasswordAdmin = "hola";
 
-        // llamar a los metodos aqui
-        byte hola = Menus.menu_principal(input);
-        // de acuerdo a lo que elija se muestra un menu u otro
+        
+        // Llamada al menu principal y almacenamos una variable con la opcion elegida
+        Byte opcion = Menus.menu_principal(input);
+        
+
+        if (opcion == 1){
+            Menus.Acceder_Usuario(input);
+        }   else {System.out.println("nada");
+            }
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
         
         
         

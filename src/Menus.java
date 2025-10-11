@@ -17,11 +17,18 @@ public class Menus {
     // Menu que se muestra al inicializar el programa
     static byte menu_principal(Scanner input) {
         System.out.println("\nLa Cantera Reservas");
-        System.out.println("\n1. Acceder como cliente\n2.Acceder como administrador");
+        System.out.println("\n1. Acceder como Cliente\n2.Acceder como administrador");
         System.out.print("\nDigite su opcion: ");
         byte opcion = input.nextByte();
-        System.out.println("\n");
+        System.out.print("\n");
         return opcion;
+    }
+
+    // Menu Principal Usuario/Cliente
+    public static String Acceder_Usuario(Scanner input) {
+        System.out.println("1.Iniciar Sesión\n2.Registrarse");
+        String Username = input.nextLine();
+        return Username;
     }
 
     // Menu mostrado al elegir la opcion Usuario en el menu principal y acceder
