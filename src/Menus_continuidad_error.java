@@ -8,14 +8,14 @@ public class Menus_continuidad_error {
         
         System.out.print("╔═════════════════════════════════╗");
         System.out.print("║                                 ║");
-        System.out.print("║      Bienvenido cliente         ║");
+        System.out.print("║      Bienvenido cliente.        ║");
         System.out.print("║                                 ║");
         System.out.print("╚═════════════════════════════════╝"); 
     }
    public void Sesion_admin() {
         System.out.print("╔═════════════════════════════════╗");
         System.out.print("║                                 ║");
-        System.out.print("║    Bienvenido Administrador     ║");
+        System.out.print("║    Bienvenido Administrador.    ║");
         System.out.print("║                                 ║");
         System.out.print("╚═════════════════════════════════╝");
     }
@@ -36,5 +36,6 @@ public class Menus_continuidad_error {
         System.out.print("║                                 ║");
         System.out.print("╚═════════════════════════════════╝");
     }
+
 
 }
