@@ -2,7 +2,7 @@ package src;
 
 import java.util.Scanner;
 
-public class Menus {
+public class Inicio_sesion_y_registro {
     /*
      * Creé el objeto Scanner dentro de un metodo MAIN para reutilizarlo en los
      * demas metodos, al crearlo en un metodo individual su alcance es solo local

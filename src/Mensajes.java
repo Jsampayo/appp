@@ -1,6 +1,6 @@
 package src;
 
-public class Menus_continuidad_error {
+public class Mensajes {
     
     
     //menus para colocar a la hora de que la sesion o de un error o sea correcta para continuar
