@@ -10,9 +10,8 @@ public class Inicio_sesion_y_registro {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        String Username = Inicio_de_sesion_User(input);
-        System.out.println(Username);
-    }
+        }
+  
 
     // Menu que se muestra al inicializar el programa
     static byte menu_principal(Scanner input) {
@@ -58,5 +57,20 @@ public class Inicio_sesion_y_registro {
         String RegistroPassword = input.nextLine();
         return RegistroPassword;
     }
+
+    //Menu mostrado al elegir la opcion Administrador en el menu principal 
+    public static String AdminUser(Scanner input){
+        System.out.println("Ingrese su Nombre de administrador");
+        String AdminName = input.nextLine();
+        return AdminName;
+    }
+
+    //Menu mostrado al elegir la opcion Administrador en el menu principal 
+    public static String AdminPassword(Scanner input){
+        System.out.println("Ingrese su Contraseña de administrador");
+        String AdminPassword = input.nextLine();
+        return AdminPassword;
+    }
+    
 
 }
