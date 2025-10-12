@@ -4,7 +4,7 @@ public class Mensajes {
     
     
     //menus para colocar a la hora de que la sesion o de un error o sea correcta para continuar
-    public void Sesion_usuario() {
+    public static void Sesion_usuario() {
         
         System.out.print("╔═════════════════════════════════╗");
         System.out.print("║                                 ║");
@@ -12,14 +12,14 @@ public class Mensajes {
         System.out.print("║                                 ║");
         System.out.print("╚═════════════════════════════════╝"); 
     }
-public void Sesion_admin() {
+public static void Sesion_admin() {
         System.out.print("╔═════════════════════════════════╗");
         System.out.print("║                                 ║");
         System.out.print("║    Bienvenido Administrador.    ║");
         System.out.print("║                                 ║");
         System.out.print("╚═════════════════════════════════╝");
     }
-public void Sesion_Exitosa() {
+public static void Sesion_Exitosa() {
         System.out.print("╔═════════════════════════════════╗");
         System.out.print("║                                 ║");
         System.out.print("║       Su registro a sido        ║");
@@ -27,7 +27,7 @@ public void Sesion_Exitosa() {
         System.out.print("║                                 ║");
         System.out.print("╚═════════════════════════════════╝");
     }
-public void Sesion_error() {
+public static void Sesion_error() {
         System.out.print("╔═════════════════════════════════╗");
         System.out.print("║                                 ║");
         System.out.print("║      su usario o contraseña     ║");
@@ -36,7 +36,7 @@ public void Sesion_error() {
         System.out.print("╚═════════════════════════════════╝");
 
     }
-public void Sesion_en_uso() {
+public static void Sesion_en_uso() {
         System.out.print("╔═════════════════════════════════╗");
         System.out.print("║                                 ║");
         System.out.print("║      Este usuario ya esta       ║");
