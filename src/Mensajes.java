@@ -19,11 +19,19 @@ public void Sesion_admin() {
         System.out.print("║                                 ║");
         System.out.print("╚═════════════════════════════════╝");
     }
+public void Sesion_Exitosa() {
+        System.out.print("╔═════════════════════════════════╗");
+        System.out.print("║                                 ║");
+        System.out.print("║       Su registro a sido        ║");
+        System.out.print("║             Exitosó.            ║");
+        System.out.print("║                                 ║");
+        System.out.print("╚═════════════════════════════════╝");
+    }
 public void Sesion_error() {
         System.out.print("╔═════════════════════════════════╗");
         System.out.print("║                                 ║");
         System.out.print("║      su usario o contraseña     ║");
-        System.out.print("║         son incorrectos         ║");
+        System.out.print("║         son incorrectos.        ║");
         System.out.print("║                                 ║");
         System.out.print("╚═════════════════════════════════╝");
 
@@ -31,8 +39,8 @@ public void Sesion_error() {
 public void Sesion_en_uso() {
         System.out.print("╔═════════════════════════════════╗");
         System.out.print("║                                 ║");
-        System.out.print("║       Este usuario ya esta      ║");
-        System.out.print("║             registrado          ║");
+        System.out.print("║      Este usuario ya esta       ║");
+        System.out.print("║           registrado.           ║");
         System.out.print("║                                 ║");
         System.out.print("╚═════════════════════════════════╝");
     }
