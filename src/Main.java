@@ -9,21 +9,21 @@ public class Main {
 
         
         // Llamada al menu principal y almacenamos una variable con la opcion elegida
-        Byte opcion = Menus.menu_principal(input);
+        Byte opcion = Inicio_sesion_y_registro.menu_principal(input);
         
 
         if (opcion == 1){
-           byte inicio = Menus.Menu_cliente(input);
+           byte inicio = Inicio_sesion_y_registro.Menu_cliente(input);
            if (inicio == 1){
-            String Username = Menus.Inicio_de_sesion_User(input);
-            String UserPassword = Menus.Inicio_de_sesion_UserPassword(input);
+            String Username = Inicio_sesion_y_registro.Inicio_de_sesion_User(input);
+            String UserPassword = Inicio_sesion_y_registro.Inicio_de_sesion_UserPassword(input);
             //validar que estas credenciales sean correctas, si no son correctar repetir el proceso
             //if (    )
             //else {
             // Menus_continuidad_error.Sesion_error();}
            }else if (inicio == 2){
-                String RegistroUser = Menus.Registrar_Username(input);
-                String RegistroPassword = Menus.Registro_Password(input);
+                String RegistroUser = Inicio_sesion_y_registro.Registrar_Username(input);
+                String RegistroPassword = Inicio_sesion_y_registro.Registro_Password(input);
                 
                 
                 // else{
