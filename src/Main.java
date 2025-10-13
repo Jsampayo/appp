@@ -1,4 +1,5 @@
 package src;
+import java.util.HashMap;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
@@ -8,7 +9,6 @@ public class Main {
         String IdAdmin = "1043634434";
         String PasswordAdmin = "hola";
 
-        
         // Llamada al menu principal y almacenamos una variable con la opcion elegida para elegir el men correspondiente
         Byte opcion = Inicio_sesion_y_registro.menu_principal(input);
 
