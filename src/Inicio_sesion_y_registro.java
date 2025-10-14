@@ -1,5 +1,6 @@
 package src;
 
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class Inicio_sesion_y_registro {
@@ -11,7 +12,6 @@ public class Inicio_sesion_y_registro {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         }
-  
 
     // Menu que se muestra al inicializar el programa
     static byte menu_principal(Scanner input) {
@@ -24,10 +24,51 @@ public class Inicio_sesion_y_registro {
     }
 
     // Menu Principal Usuario/Cliente
-    public static byte Menu_cliente(Scanner input) {
+    public static void Menu_cliente(Scanner input) {
+    HashMap <String,String> Usuarios = new HashMap<>();
         System.out.println("1. Iniciar Sesión\n2. Registrarse");
+        byte index = 1;
         byte opcion = input.nextByte();
-        return opcion;
+        
+        switch (opcion) {
+        
+            case 1:{
+                    input.nextLine();
+                    String Username = Inicio_sesion_y_registro.Inicio_de_sesion_User(input);
+                    System.out.println("Username "+ Username);
+                    String UserPassword = Inicio_sesion_y_registro.Inicio_de_sesion_UserPassword(input);
+                    System.out.println("Password "+ UserPassword);
+                    break;
+            }
+
+            case 2: {                        
+                    input.nextLine();
+                    String RegistroUser = Inicio_sesion_y_registro.Registrar_Username(input);
+                    System.out.println("Register Username: "+ RegistroUser);
+                     String RegistroPassword = Inicio_sesion_y_registro.Registro_Password(input);
+                    System.out.println("Register Password: "+ RegistroPassword); 
+                    
+                    Usuarios.put(IdAdmin, PasswordAdmin);
+                    if (Usuarios.containsKey(RegistroUser)){
+                        Mensajes.Sesion_en_uso();
+                    }
+
+                    else {
+                        Usuarios.put(RegistroUser, RegistroPassword);
+
+                        for (String user : Usuarios.keySet()){
+                            System.out.println(index+". Usuario: "+user);
+                        }
+                    }
+                    break;
+            }
+            
+            default:{
+                    Mensajes.Opción_Invalida();
+                    Menu_cliente(input);        
+                    break;
+            }
+        }
     }
 
     // Menu mostrado al elegir la opcion Usuario en el menu principal y acceder
