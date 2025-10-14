@@ -48,7 +48,6 @@ public class Inicio_sesion_y_registro {
                      String RegistroPassword = Inicio_sesion_y_registro.Registro_Password(input);
                     System.out.println("Register Password: "+ RegistroPassword); 
                     
-                    Usuarios.put(IdAdmin, PasswordAdmin);
                     if (Usuarios.containsKey(RegistroUser)){
                         Mensajes.Sesion_en_uso();
                     }
