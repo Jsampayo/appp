@@ -11,7 +11,8 @@ public class Inicio_sesion_y_registro {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        }
+
+    }
 
     // Menu que se muestra al inicializar el programa
     static byte menu_principal(Scanner input) {
@@ -25,47 +26,47 @@ public class Inicio_sesion_y_registro {
 
     // Menu Principal Usuario/Cliente
     public static void Menu_cliente(Scanner input) {
-    HashMap <String,String> Usuarios = new HashMap<>();
+        HashMap<String, String> Usuarios = new HashMap<>();
         System.out.println("1. Iniciar Sesión\n2. Registrarse");
         byte index = 1;
         byte opcion = input.nextByte();
-        
+
         switch (opcion) {
-        
-            case 1:{
-                    input.nextLine();
-                    String Username = Inicio_sesion_y_registro.Inicio_de_sesion_User(input);
-                    System.out.println("Username "+ Username);
-                    String UserPassword = Inicio_sesion_y_registro.Inicio_de_sesion_UserPassword(input);
-                    System.out.println("Password "+ UserPassword);
-                    break;
+
+            case 1: {
+                input.nextLine();
+                String Username = Inicio_sesion_y_registro.Inicio_de_sesion_User(input);
+                System.out.println("Username " + Username);
+                String UserPassword = Inicio_sesion_y_registro.Inicio_de_sesion_UserPassword(input);
+                System.out.println("Password " + UserPassword);
+                break;
             }
 
-            case 2: {                        
-                    input.nextLine();
-                    String RegistroUser = Inicio_sesion_y_registro.Registrar_Username(input);
-                    System.out.println("Register Username: "+ RegistroUser);
-                     String RegistroPassword = Inicio_sesion_y_registro.Registro_Password(input);
-                    System.out.println("Register Password: "+ RegistroPassword); 
-                    
-                    if (Usuarios.containsKey(RegistroUser)){
-                        Mensajes.Sesion_en_uso();
-                    }
+            case 2: {
+                input.nextLine();
+                String RegistroUser = Inicio_sesion_y_registro.Registrar_Username(input);
+                System.out.println("Register Username: " + RegistroUser);
+                String RegistroPassword = Inicio_sesion_y_registro.Registro_Password(input);
+                System.out.println("Register Password: " + RegistroPassword);
 
-                    else {
-                        Usuarios.put(RegistroUser, RegistroPassword);
+                if (Usuarios.containsKey(RegistroUser)) {
+                    Mensajes.Sesion_en_uso();
+                }
 
-                        for (String user : Usuarios.keySet()){
-                            System.out.println(index+". Usuario: "+user);
-                        }
+                else {
+                    Usuarios.put(RegistroUser, RegistroPassword);
+
+                    for (String user : Usuarios.keySet()) {
+                        System.out.println(index + ". Usuario: " + user);
                     }
-                    break;
+                }
+                break;
             }
-            
-            default:{
-                    Mensajes.Opción_Invalida();
-                    Menu_cliente(input);        
-                    break;
+
+            default: {
+                Mensajes.Opción_Invalida();
+                Menu_cliente(input);
+                break;
             }
         }
     }
@@ -98,19 +99,41 @@ public class Inicio_sesion_y_registro {
         return RegistroPassword;
     }
 
-    //Menu mostrado al elegir la opcion Administrador en el menu principal 
-    public static String AdminUser(Scanner input){
-        System.out.println("Ingrese su Nombre de administrador");
-        String AdminName = input.nextLine();
-        return AdminName;
+    // Menu mostrado al elegir la opcion Administrador en el menu principal
+    public static String AdminUser(Scanner input) {
+        System.out.print("\nIngrese su ID: ");
+        String AdminId = input.nextLine();
+        return AdminId;
     }
 
-    //Menu mostrado al elegir la opcion Administrador en el menu principal 
-    public static String AdminPassword(Scanner input){
-        System.out.println("Ingrese su Contraseña de administrador");
+    // Menu mostrado al elegir la opcion Administrador en el menu principal
+    public static String AdminPassword(Scanner input) {
+        System.out.print("\nIngrese su contraseña: ");
         String AdminPassword = input.nextLine();
         return AdminPassword;
     }
+
     
 
+    public static void Inicio_de_sesion_Admin(Scanner input, String IdAdmin, String PasswordAdmin, boolean isFirstCall) {
+
+        if (isFirstCall) {
+            input.nextLine();
+            isFirstCall = false;
+        }
+
+        System.out.print("Inicio de sesion administrador\n");
+
+        String AdminId = AdminUser(input);
+        String AdminPassword = AdminPassword(input);
+
+        if (!(AdminId.equals(IdAdmin)) && !(AdminPassword.equals(PasswordAdmin))) {
+            Mensajes.Sesion_error();
+            Inicio_sesion_y_registro.Inicio_de_sesion_Admin(input, IdAdmin, PasswordAdmin, isFirstCall);
+        } else {
+            Mensajes.Sesion_admin();
+            isFirstCall = true;
+        }
+
+    }
 }
