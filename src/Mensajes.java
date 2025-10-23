@@ -34,6 +34,7 @@ public static void Sesion_error() {
         System.out.println("║         son incorrectos.        ║");
         System.out.println("║                                 ║");
         System.out.println("╚═════════════════════════════════╝");
+        System.out.println("\n");
 
     }
 public static void Sesion_en_uso() {
